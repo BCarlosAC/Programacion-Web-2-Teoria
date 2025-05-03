@@ -1,7 +1,0 @@
-[
-    { "region": "Arequipa", "fecha": "2022-01-01", "confirmados": 10 },
-    { "region": "Arequipa", "fecha": "2022-01-02", "confirmados": 12 },
-    { "region": "Cusco", "fecha": "2022-01-01", "confirmados": 8 },
-    { "region": "Cusco", "fecha": "2022-01-02", "confirmados": 15 }
-]
-  
