@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMDB Explorer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <script src='server.js'></script>
+  <h1>IMDB Database Explorer</h1>
+  <form id="formulario">
+    <label for="opciones">Selecciona qué quieres ver:</label>
+    <select id="opciones" name="tabla">
+      <option value="Actor">Actores</option>
+      <option value="Casting">Casting</option>
+      <option value="Movie">Películas</option>
+    </select>
+    <button type="button" id="btnConsultar">Consultar</button>
+  </form>
+  
+  <div id="resultados">
+    <!-- Aquí se mostrarán los resultados -->
+  </div>
 </body>
 </html>
