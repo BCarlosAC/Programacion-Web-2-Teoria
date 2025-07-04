@@ -1,15 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   title = 'my-dream-app';
-  name = 'Brayan Carlos A. C.';
-  email = 'bauccacusic@unsa.edu.pe';
-  webpage = "http://www.unsa.edu.pe";
-}
+  name : string;
+  email : string;
+  webpage : string;
+  hobbies : string[];
+
+  constructor() {
+    console.log("Constructor working...");
+    this.name = "Brayan Carlos A. C.";
+    this.email = "bauccacusi@unsa.edu.pe";
+    this.webpage = "https://www.unsa.edu.pe";
+    this.hobbies = ["Futbol", "Programación", "Netflix"];
+  }
+  showhobbies() {
+    return true;
+  }
+} 
