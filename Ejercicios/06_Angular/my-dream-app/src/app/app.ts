@@ -8,5 +8,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
-  protected title = 'my-dream-app';
+  title = 'my-dream-app';
+  name = 'Brayan Carlos A. C.';
+  email = 'bauccacusic@unsa.edu.pe';
+  webpage = "http://www.unsa.edu.pe";
 }
