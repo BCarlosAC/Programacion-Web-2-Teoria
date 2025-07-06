@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HelloWorldComponent } from './hello-world/hello-world';
 import { UserComponent } from './user/user';
-
+import { DataService } from './data';
+import { Post } from './Post';
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, CommonModule, HelloWorldComponent, UserComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'my-dream-app';
   name : string;
   email : string;
@@ -20,18 +22,24 @@ export class AppComponent {
   showHobbies: boolean;
   users = ['ryan','joe','cameron','john'];
   activated = false;
-
-  constructor() {
-    console.log("Constructor working...");
+  posts: Post[] = [];
+  
+  constructor(private dataService: DataService) {
+    console.log("Constructor working..");
     this.name = "Brayan Carlos A. C.";
     this.email = "bauccacusi@unsa.edu.pe";
     this.webpage = "https://www.unsa.edu.pe";
     this.hobbies = ["Futbol", "Programación", "Netflix"];
     this.showHobbies = false;
   }
-  /*showhobbies() {
-    return true;
-  }*/
+  
+  ngOnInit() {
+    this.dataService.getData().subscribe(data => {
+      console.log(data);
+      this.posts = data;
+    });
+  }
+
   toggleHobbies() {
     this.showHobbies = !this.showHobbies;
   }
