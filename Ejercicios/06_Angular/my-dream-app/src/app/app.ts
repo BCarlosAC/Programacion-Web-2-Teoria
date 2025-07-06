@@ -5,6 +5,7 @@ import { HelloWorldComponent } from './hello-world/hello-world';
 import { UserComponent } from './user/user';
 import { DataService } from './data';
 import { Post } from './Post';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,6 +13,7 @@ import { Post } from './Post';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
+
 
 export class AppComponent implements OnInit{
   title = 'my-dream-app';
@@ -23,7 +25,7 @@ export class AppComponent implements OnInit{
   users = ['ryan','joe','cameron','john'];
   activated = false;
   posts: Post[] = [];
-  
+
   constructor(private dataService: DataService) {
     console.log("Constructor working..");
     this.name = "Brayan Carlos A. C.";
