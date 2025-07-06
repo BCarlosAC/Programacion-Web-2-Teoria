@@ -11,7 +11,7 @@ import { UserComponent } from './user/user';
   styleUrl: './app.scss'
 })
 
-export class App {
+export class AppComponent {
   title = 'my-dream-app';
   name : string;
   email : string;
@@ -43,6 +43,7 @@ export class App {
   }
 
   sayHello() {
-    alert("Hola desde app.component")
+    console.log("Click detectado");
+    alert("Hola desde AppComponent")
   }
 } 
