@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HelloWorldComponent } from './hello-world/hello-world';
+import { UserComponent } from './user/user';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, HelloWorldComponent],
+  imports: [RouterOutlet, CommonModule, HelloWorldComponent, UserComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
+
 export class App {
   title = 'my-dream-app';
   name : string;
@@ -16,6 +18,8 @@ export class App {
   webpage : string;
   hobbies : string[];
   showHobbies: boolean;
+  users = ['ryan','joe','cameron','john'];
+  activated = false;
 
   constructor() {
     console.log("Constructor working...");

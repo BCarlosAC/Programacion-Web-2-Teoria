@@ -23,3 +23,8 @@
   <h1> {{ title }} </h1>
 </div>
 <app-hello-world>Aqui</app-hello-world>
+<ul>
+  <li *ngFor="let user of users">
+    <app-user [nameUser]="user"></app-user>
+  </li>
+</ul>
